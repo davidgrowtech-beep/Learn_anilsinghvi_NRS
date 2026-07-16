@@ -148,11 +148,9 @@ function fireConversion(){
     return;
   }
   if (isLikelyRealUser()) {
-    fbq('track', 'Lead', {
+    fbq('track', 'subscriber', {
       content_name: 'Telegram Community',
-      value: 0,
-      currency: 'INR'
-    }, {
+          }, {
       eventID: 'telegram_subscribe_' + Date.now()
     });
   } else {
